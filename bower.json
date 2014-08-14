@@ -1,0 +1,30 @@
+{
+  "name": "swagwise",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Goldcolten/swagwise-skeleton",
+  "authors": [
+    "Colten <coltenrocks@gmail.com>"
+  ],
+  "description": "Swagwise ecomers edu app",
+  "main": "appindex.html",
+  "keywords": [
+    "angularjs"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/assets/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.21",
+    "jquery": "~2.1.1"
+  },
+  "resolutions": {
+    "angular": "1.3"
+  }
+}

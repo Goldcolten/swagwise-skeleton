@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Swagwise">
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,80 +31,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand"><img src="assets/images/swagwise-logo.png" alt="Swagwise"></a>
+                <a class="navbar-brand" ui-sref="home"><img src="assets/images/swagwise-logo.png" alt="Swagwise"></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a>Home</a></li>
-                    <li><a>Swag</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Contact</a></li>
+                    <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+                    <li ui-sref-active="active"><a ui-sref="swag">Swag</a></li>
+                    <li ui-sref-active="active"><a ui-sref="about">About</a></li>
+                    <li ui-sref-active="active"><a ui-sref="contact">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a>Login</a>
+                    <li ui-sref-active="active">
+                        <a ui-sref="login">Login</a>
                     </li>
-                    <li><a>Register</a></li>
+                    <li ui-sref-active="active"><a ui-sref="signup">Register</a></li>
                 </ul>
             </div><!--/.navbar-collapse -->
         </div>
     </div>
 
-    <div class="jumbotron">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-lg-12">
-                    <h1 class="h1">Swagwise <small>Get your swagger on!</small></h1>
-                </div>
-            </div>
-        </div>
-    </div>
+    <ui-view></ui-view>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>Featured Products</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <h4>Product Title</h4>
-                <div class="row">
-                    <div class="col-xs-4 col-md-6">
-                        <a class="thumbnail">
-                            <img src="http://placehold.it/180x180" alt="">
-                        </a>
-                    </div>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                </div>
-                <p><a class="btn btn-default" role="button">View details <i class="glyphicon glyphicon-chevron-right"></i></a></p>
-            </div>
-            <div class="col-md-4">
-                <h4>Product Title</h4>
-                <div class="row">
-                    <div class="col-xs-6 col-md-6">
-                        <a class="thumbnail">
-                            <img src="http://placehold.it/180x180" alt="">
-                        </a>
-                    </div>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                </div>
-                <p><a class="btn btn-default" role="button">View details <i class="glyphicon glyphicon-chevron-right"></i></a></p>
-            </div>
-            <div class="col-md-4">
-                <h4>Product Title</h4>
-                <div class="row">
-                    <div class="col-xs-6 col-md-6">
-                        <a href="#" class="thumbnail">
-                            <img src="http://placehold.it/180x180" alt="">
-                        </a>
-                    </div>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                </div>
-                <p><a class="btn btn-default" role="button">View details <i class="glyphicon glyphicon-chevron-right"></i></a></p>
-            </div>
-        </div>
-    </div>
+
 
     <div class="container">
         <hr>
@@ -113,5 +61,12 @@
         </footer>
     </div>
 
+    <script src="assets/lib/jquery/dist/jquery.min.js"></script>
+    <script src="assets/lib/angular/angular.min.js"></script>
+    <script src="assets/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <script src="states.js"></script>
+    <script src="controllers.js"></script>
+    <script src="services.js"></script>
 </body>
 </html>
